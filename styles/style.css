@@ -1,5 +1,5 @@
 :root {
-    --gray: #F9F9F9;
+    --gray: #F4F4F4;
 }
 
 body {
@@ -10,6 +10,10 @@ body {
 html, body {
     height: 100%;
     overflow: hidden;
+}
+
+body {
+    background-color: var(--gray);
 }
 
 /* Remove bullet points */
@@ -36,6 +40,10 @@ nav .right-side {
     align-items: center;
 }
 
+nav li {
+    cursor: pointer;
+}
+
 nav ul {
     display: flex;
     margin: 0;
@@ -53,8 +61,22 @@ nav .media-logos ul {
     gap: 30px;
 }
 
+nav img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+nav #yelp-logo {
+    width: 70px;
+}
+
 nav button {
     margin-left: 30px;
+    cursor: pointer;
+    padding: 14px;
+    border: 2px solid black;
+    border-radius: 2px;
 }
 
 main {
@@ -62,9 +84,35 @@ main {
     justify-content: center;
     align-items: center;
     margin: 0 40px;
+
+    position: relative;
+    text-align: center;
 }
 
 main img {
     width: 100%;
     height: auto;
+}
+
+main .cover-text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    max-width: 400px;
+    word-wrap: break-word;
+    display: block;
+}
+
+main button {
+    position: absolute;
+    padding: 20px;
+    background: transparent;
+    border: 3px solid black;
+    font-weight: bold;
+}
+
+.cover-text button {
+    font-size: 20px;
+    position: relative;
+    top: 20px;
 }
